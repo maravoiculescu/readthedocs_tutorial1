@@ -1,0 +1,874 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>How to Start an exciting Calculation &#8212; exciting tutorials  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Welcome to exciting tutorials’s documentation!" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt .copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+.jp-RenderedHTMLCommon table,
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.jp-RenderedHTMLCommon thead,
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+.jp-RenderedHTMLCommon tr,
+.jp-RenderedHTMLCommon th,
+.jp-RenderedHTMLCommon td,
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.jp-RenderedHTMLCommon th,
+div.rendered_html th {
+  font-weight: bold;
+}
+.jp-RenderedHTMLCommon tbody tr:nth-child(odd),
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.jp-RenderedHTMLCommon tbody tr:hover,
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<section id="How-to-Start-an-exciting-Calculation">
+<h1>How to Start an exciting Calculation<a class="headerlink" href="#How-to-Start-an-exciting-Calculation" title="Permalink to this heading">¶</a></h1>
+<p><strong>by Andris Gulans, Jürgen Spitaler, &amp; Pasquale Pavone; for</strong><a class="reference external" href="http://exciting.wikidot.com/oxygen">exciting oxygen</a></p>
+<hr style="border:2px solid #DDD"></hr><p><strong>Purpose</strong>: In this tutorial you will learn how to make the first steps with <strong>exciting</strong>. In addition, we give here a description of the output files produced by an <strong>exciting</strong> calculation.</p>
+<hr style="border:2px solid #DDD"></hr><div class="alert alert-block alert-warning"><p><strong>Table of Contents</strong></p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="#Before">0. Before Starting</a></div>
+<div class="line"><a class="reference external" href="#PrepInput">1. Preparing Input</a></div>
+<div class="line"><a class="reference external" href="#RunExciting">2. Running exciting</a></div>
+<div class="line"><a class="reference external" href="#INFOOUT">3. Reading INFO.OUT - The Main Output File</a></div>
+<div class="line"><a class="reference external" href="#Outputs">4. Output Files of an exciting Calculation</a></div>
+</div>
+</div><hr style="border:1px solid #DDD"></hr><section id="0.-Before-Starting">
+<h2>0. Before Starting<a class="headerlink" href="#0.-Before-Starting" title="Permalink to this heading">¶</a></h2>
+<p>Before running any Jupyter tutorials, please refer to the <strong>``00_before_starting.md``</strong> document on how to correctly set up the environment. This only needs to be done once. After which, the <strong>venv</strong> can be (re)activated from <strong>exciting</strong>’s root directory:</p>
+<div style="background-color: rgb(224, 224, 224);"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> tools/excitingjupyter/venv/excitingvenv/bin/activate
+</pre></div>
+</div>
+</div></div><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
+from excitingjupyter.utilities import get_exciting_root
+
+exciting_root = get_exciting_root()
+exciting_species = os.path.join(exciting_root, &quot;species&quot;)
+print(exciting_root)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+wd in get_exciting_root: /home1/voiculem/exciting_jupyter/tools/excitingjupyter/excitingjupyter/01_getting_started
+/home1/voiculem/exciting_jupyter
+</pre></div></div>
+</div>
+<hr style="border:1px solid #DDD"></hr></section>
+<section id="1.-Preparing-Input">
+<h2>1. Preparing Input<a class="headerlink" href="#1.-Preparing-Input" title="Permalink to this heading">¶</a></h2>
+<p><strong>i) Diamond</strong></p>
+<div style="text-align: justify"><p>For the very first <strong>exciting</strong> run, you will use an already prepared example of an input file that sets up a total-energy calculation of diamond. Input files for <strong>exciting</strong> are written in the <strong>XML</strong> format and are typically named <strong>input.xml</strong>. The <strong>XML</strong> format allows your data to be written in a structured way. Figuratively speaking, an <strong>exciting</strong> input is pretty much like an article with its sections and subsections. In case of <strong>XML</strong> data, sections and subsections are called
+elements.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;input&gt;</span>
+
+   <span class="nt">&lt;title&gt;</span>Diamond<span class="nt">&lt;/title&gt;</span>
+
+   <span class="nt">&lt;structure</span> <span class="na">speciespath=</span><span class="s">&quot;/home/tutorial/exciting/species&quot;</span><span class="nt">&gt;</span>
+
+      <span class="nt">&lt;crystal</span> <span class="na">scale=</span><span class="s">&quot;6.7274&quot;</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;basevect&gt;</span>0.0   0.5   0.5<span class="nt">&lt;/basevect&gt;</span>
+         <span class="nt">&lt;basevect&gt;</span>0.5   0.0   0.5<span class="nt">&lt;/basevect&gt;</span>
+         <span class="nt">&lt;basevect&gt;</span>0.5   0.5   0.0<span class="nt">&lt;/basevect&gt;</span>
+      <span class="nt">&lt;/crystal&gt;</span>
+
+      <span class="nt">&lt;species</span> <span class="na">speciesfile=</span><span class="s">&quot;C.xml&quot;</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;atom</span> <span class="na">coord=</span><span class="s">&quot;0.00 0.00 0.00&quot;</span><span class="nt">/&gt;</span>
+         <span class="nt">&lt;atom</span> <span class="na">coord=</span><span class="s">&quot;0.25 0.25 0.25&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/species&gt;</span>
+
+   <span class="nt">&lt;/structure&gt;</span>
+
+   <span class="nt">&lt;groundstate</span>
+      <span class="na">ngridk=</span><span class="s">&quot;4 4 4&quot;</span>
+      <span class="na">outputlevel=</span><span class="s">&quot;normal&quot;</span>
+      <span class="na">xctype=</span><span class="s">&quot;GGA_PBE_SOL&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;/groundstate&gt;</span>
+
+<span class="nt">&lt;/input&gt;</span>
+</pre></div>
+</div>
+<p>Let us examine this example bit-by-bit. The first thing to be said is that an <strong>XML</strong> is <strong>not sensitive</strong> to line indentation. However, for the sake of clarity, line indentation is used in all examples of these Tutorials to illustrate the hierarchy among elements. Now, let’s come back to the <strong>input.xml</strong> shown above. The first and the last line indicate the beginning and the end of the input.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;input&gt;</span>
+...
+<span class="nt">&lt;/input&gt;</span>
+</pre></div>
+</div>
+<p>The element title contains some freely chosen text simply to describe the calculation.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;title&gt;</span>Diamond<span class="nt">&lt;/title&gt;</span>
+</pre></div>
+</div>
+<p>The next element, structure, describes the geometry and the chemical composition of a studied system. Notice that the declaration of the structure section contains as additional information the parameter speciespath.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;structure</span> <span class="na">speciespath=</span><span class="s">&quot;/home/tutorials/exciting/species/&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+<p>Such parameters in the XML language are called attributes, and their values are always given in quotes regardless whether it is numerical, symbolic, or boolean information. In particular, the attribute speciespath defines the location, where the files with the data about chemical elements are stored. In the example above, the speciespath <strong>must be changed</strong> explicitly by either inserting the path for the attribute speciespath by hand in the input file.</p>
+<p><strong>Remark on the species files directory</strong> in <strong>exciting</strong>: Starting with the release of <strong>exciting boron</strong>, <strong>it is not possible</strong> to define the attribute speciespath (i.e., the directory containing the species files) by linking directly to the <strong>exciting</strong>-code site.</p>
+<p>The element structure contains subelements crystal and species. The element crystal is used for defining the Bravais lattice of the studied system. It contains three lattice vectors (each specified by an element basevect) in units of the attribute scale that <strong>is given in Bohr</strong>. The element species describes the chemical composition of the studied system. Atomic coordinates are specified by the element atom. The primitive unit cell of diamond contains two carbon atoms, and their positions are
+given in the basis of the lattice vectors (<strong>lattice coordinates</strong>).</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>&lt;structure ...&gt;
+
+   &lt;crystal scale=&quot;6.7274&quot;&gt;
+      &lt;basevect&gt;0.0   0.5   0.5&lt;/basevect&gt;
+      &lt;basevect&gt;0.5   0.0   0.5&lt;/basevect&gt;
+      &lt;basevect&gt;0.5   0.5   0.0&lt;/basevect&gt;
+   &lt;/crystal&gt;
+
+   &lt;species speciesfile=&quot;C.xml&quot;&gt;
+      &lt;atom coord=&quot;0.00 0.00 0.00&quot; /&gt;
+      &lt;atom coord=&quot;0.25 0.25 0.25&quot; /&gt;
+   &lt;/species&gt;
+
+&lt;/structure&gt;
+</pre></div>
+</div>
+<p>The next element, groundstate, contains attributes that define computational parameters. In particular, in calculations of periodic systems it is necessary to define how the Brillouin zone is sampled. It is done using the attribute ngridk. The calculation of some quantities, such as the electron density and the total energy, requires an integration over the Brillouin zone. In practice, the integration is replaced with a sum over equally-spaced points. The number of divisions of the Brillouin
+zone along each of the three directions of the primitive vectors of the reciprocal lattice is exactly what is specified in the attribute ngridk.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;groundstate</span>
+   <span class="na">ngridk=</span><span class="s">&quot;4 4 4&quot;</span>
+   <span class="na">outputlevel=</span><span class="s">&quot;normal&quot;</span>
+   <span class="na">xctype=</span><span class="s">&quot;GGA_PBE_SOL&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/groundstate&gt;</span>
+</pre></div>
+</div>
+<p>The attribute outputlevel of the groundstate element specifies the amount of information which is printed to output files. The attribute xctype specifies the type of exchange-correlation functional to be used.</p>
+<p>The next step is writing the complete input as a string and saving it as <strong>input.xml</strong>. While for storage or archiving purposes you may choose any name for the input file, running the <strong>exciting</strong> code requires that specifically the file <strong>input.xml</strong> is present.</p>
+</div><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-bash notranslate"><div class="highlight"><pre><span></span>%%bash
+<span class="c1">#create a directory to run exciting if it does not exist yet</span>
+<span class="nv">run_folder</span><span class="o">=</span><span class="s2">&quot;run_tutorial1&quot;</span>
+<span class="k">if</span> ! <span class="o">[</span> -d  <span class="nv">$run_folder</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> mkdir <span class="nv">$run_folder</span><span class="p">;</span> <span class="k">fi</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>input_str = f&quot;&quot;&quot;
+&lt;input&gt;
+
+   &lt;title&gt;Diamond&lt;/title&gt;
+
+   &lt;structure speciespath=&quot;{exciting_species}&quot;&gt;
+
+      &lt;crystal scale=&quot;6.7274&quot;&gt;
+            &lt;basevect&gt;0.0   0.5   0.5&lt;/basevect&gt;
+            &lt;basevect&gt;0.5   0.0   0.5&lt;/basevect&gt;
+            &lt;basevect&gt;0.5   0.5   0.0&lt;/basevect&gt;
+      &lt;/crystal&gt;
+
+      &lt;species speciesfile=&quot;C.xml&quot;&gt;
+         &lt;atom coord=&quot;0.00 0.00 0.00&quot;/&gt;
+         &lt;atom coord=&quot;0.25 0.25 0.25&quot;/&gt;
+      &lt;/species&gt;
+
+   &lt;/structure&gt;
+
+   &lt;groundstate
+      ngridk=&quot;4 4 4&quot;
+      outputlevel=&quot;normal&quot;
+      xctype=&quot;GGA_PBE_SOL&quot;&gt;
+   &lt;/groundstate&gt;
+
+&lt;/input&gt;
+
+&quot;&quot;&quot;
+
+# Write out the input as an XML file:
+with open(os.path.join(os.getcwd(), &#39;run_tutorial1/input.xml&#39;), &quot;w&quot;) as fid:
+    fid.write(input_str)
+</pre></div>
+</div>
+</div>
+<p><strong>ii) Visualization of Structures</strong></p>
+<p>You are ready to start a calculation, but it makes sense to visualize the structure defined in the input before running the code. This can be done with the help of the visualization module of the Atomic Simulation Environment (<strong>ASE</strong>).</p>
+<p>Note, visualisation requires tkinter needs to be installed. Instructions are provided <a class="reference external" href="https://tkdocs.com/tutorial/install.html">here</a> if your OS is missing it.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from ase.visualize import view
+from ase.io import read
+
+# Read in the input file we just created
+atoms = read(&quot;./run_tutorial1/input.xml&quot;)
+view(atoms, viewer=&quot;nglview&quot;)
+</pre></div>
+</div>
+</div>
+<hr style="border:1px solid #DDD"></hr></section>
+<section id="2.-Running-Exciting">
+<h2>2. Running Exciting<a class="headerlink" href="#2.-Running-Exciting" title="Permalink to this heading">¶</a></h2>
+<p>In order to run <strong>exciting</strong> from the terminal, you simply need to execute the <strong>exciting_smp</strong> binary in the running directory. After a few seconds, the calculation should be finished.</p>
+<div style="background-color: rgb(224, 224, 224);"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">time</span> exciting_smp
+</pre></div>
+</div>
+</div><p>Here we used the <strong>time</strong> command before <strong>exciting_smp</strong> in order to get, at the end of the run, the elapsed time explicitly written on the screen.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-bash notranslate"><div class="highlight"><pre><span></span>%%bash
+<span class="c1"># move into the run directory</span>
+<span class="nb">cd</span> run_tutorial1<span class="p">;</span>
+<span class="c1"># load the necessary modules</span>
+module load intel<span class="p">;</span>
+<span class="c1"># run exciting</span>
+<span class="nb">time</span> <span class="nv">$EXCITINGROOT</span>/bin/exciting_smp input.xml<span class="p">;</span>
+<span class="c1"># move back to parent directory</span>
+<span class="nb">cd</span> ..<span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<hr style="border:1px solid #DDD"></hr></section>
+<section id="3.-Reading-INFO.OUT,-the-Main-Output-File">
+<h2>3. Reading INFO.OUT, the Main Output File<a class="headerlink" href="#3.-Reading-INFO.OUT,-the-Main-Output-File" title="Permalink to this heading">¶</a></h2>
+<div style="text-align: justify"><p>The execution of <strong>exciting</strong> will produce a number of output files. More details about these files will be given in the next section. Here, we will focus on the <strong>main output file</strong>, named <strong>INFO.OUT</strong>. It contains basic information about the calculation. Below, this file is discussed for the diamond example and for the default value (<strong>“normal”</strong>) of the attribute outputlevel of the groundstate element.</p>
+<ul class="simple">
+<li><p>The output file starts with a self-explanatory header.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!head -n 11 run_tutorial1/INFO.OUT
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The next lines give information on the initial density and tell us that the initialization has started.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!head -n 20 run_tutorial1/INFO.OUT | tail -n 9
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The next section contains lattice parameters and derived quantities.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!head -n 33 run_tutorial1/INFO.OUT | tail -n 14
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The further bit contains the information about the chemical composition of the crystal.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!head -n 48 run_tutorial1/INFO.OUT | tail -n 15
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The next section tells whether the calculation is a spin-polarized one.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!head -n 49 run_tutorial1/INFO.OUT | tail -n 1
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The <strong>exciting</strong> code recognizes crystal symmetries automatically and reports what has been found.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!head -n 56 run_tutorial1/INFO.OUT | tail -n 6
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The basis set related information is printed in the next section. Note that <strong>exciting</strong> uses different basis sets for the Kohn-Sham orbitals and the effective potential.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!head -n 70 run_tutorial1/INFO.OUT | tail -n 13
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Further computational details are printed below. The type of the exchange-correlation functional used in the calculation is among them.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!head -n 92 run_tutorial1/INFO.OUT | tail -n 22
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Further, intermediate results are printed after each iteration of the <strong>SCF</strong> (self-consistent field) loop.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!head -n 137 run_tutorial1/INFO.OUT | tail -n 30
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Actual values of the quantities which are relevant for self-consistency are displayed at each iteration (after the first one) and compared with convergence targets (shown in parentheses). If all self-consistency criteria are matched (values are smaller then targets) for the last 2 iterations the calculation has successfully ended.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!head -n 170 run_tutorial1/INFO.OUT | tail -n 3
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The final answer is reported at the last iteration.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!tail -n 43 run_tutorial1/INFO.OUT | head -n 30
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The final lines of <strong>INFO.OUT</strong> tell how the execution has stopped and report the total time spent in the run.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!tail -n 8 run_tutorial1/INFO.OUT
+</pre></div>
+</div>
+</div>
+<p>All of the main output files can by parsed by Python. In the example below, the results of the last iteration of the self-consistent field loop are saved in the dictionary converged_results:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from excitingtools.parser import parser_chooser
+
+results = parser_chooser(&quot;./run_tutorial1/INFO.OUT&quot;)
+max_scf = max([int(i) for i in results[&#39;scl&#39;].keys()])
+assert max_scf &lt;= 13, &quot;Expect max 13 SCF iterations to converge&quot;
+converged_results = results[&#39;scl&#39;][str(max_scf)]
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from assertions_01 import test_tutorial1
+test_tutorial1(converged_results)
+</pre></div>
+</div>
+</div>
+<hr style="border:1px solid #DDD"></hr></section>
+<section id="4.-Output-Files-of-an-exciting-Calculation">
+<h2>4. Output Files of an exciting Calculation<a class="headerlink" href="#4.-Output-Files-of-an-exciting-Calculation" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>The main output file in <strong>exciting</strong> is <strong>INFO.OUT</strong>. A detailed description of the content of this file can be found in the previous section.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>filename</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>INFO.OUT</strong></p></td>
+<td><p>Master output file containing the essential information on the material system, parameters of the calculation, results (total energy, energy contributions, charge contributions, atomic forces, Fermi energy…) of each iteration, and more. The amount of information contained in this file can be triggered using the attribute outputlevel of the groundstate element.</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Other relevant files which are updated or extended at each iteration contain information about the <strong>SCF</strong> calculation:</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>filename</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>TOTENERGY.OUT</strong></p></td>
+<td><p>Total energy in [Ha]; each line corresponds to one <strong>SCF</strong> iteration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>EFERMI.OUT</strong></p></td>
+<td><p>Fermi energy in [Ha] at the last <strong>SCF</strong> iteration.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>RMSDVEFF.OUT</strong></p></td>
+<td><p>Root-mean-square deviation of the effective potential; each line corresponds to one <strong>SCF</strong> iteration, starting from the 2nd iteration and not considering the last <strong>SCF</strong> iteration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>DFSCFMAX.OUT</strong></p></td>
+<td><p>Maximum variation of the non IBS part of the atomic forces; each line corresponds to one <strong>SCF</strong> iteration, starting from the 2nd iteration and not considering the last <strong>SCF</strong> iteration. Only written if forces are explicitly calculated (e.g., for atomic relaxation).</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>EIGVAL.OUT</strong></p></td>
+<td><p>Eigenvalues (energies) of the valence bands, for each <strong>k</strong>-point and band.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>EVALCORE.OUT</strong></p></td>
+<td><p>Energy eigenvalues (energy levels) of the core states.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>LINENGY.OUT</strong></p></td>
+<td><p>Linearization energies as fixed in the species files (if searchE = <strong>“false”</strong> for the corresponding linearization energy in the <strong>“species”.xml</strong> file) or determined by exciting (if searchE = <strong>“true”</strong> for the corresponding linearization energy in the <strong>“species”.xml</strong> file).</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Output files containing structural information, symmetries, <em>etc.</em>:</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>filename</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>LATTICE.OUT</strong></p></td>
+<td><p>Information on the lattice: Primitive lattice vectors, unit cell volume, reciprocal lattice vectors, <em>etc.</em></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>SYMCRYS.OUT</strong></p></td>
+<td><p>Information on the symmetry operations of the crystal; more symmetry information are found in the files <strong>SYMT2.OUT</strong>, <strong>SYMSITE.OUT</strong>, <strong>SYMMULT.OUT</strong>, <strong>SYMLAT.OUT</strong>, <strong>SYMINV.OUT</strong>, and <strong>SYMGENR.OUT</strong>.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>KPOINTS.OUT</strong></p></td>
+<td><p>List of <strong>k</strong>-points, their coordinates (in units of the reciprocal lattice vectors), weights, matrix size.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>BONDLENGTH.OUT</strong></p></td>
+<td><p>Interatomic distances; useful to check the correctness of an input file.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>EQATOMS.OUT</strong></p></td>
+<td><p>Information on equivalency of atoms due to the crystal symmetry.</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Output files in <strong>XML</strong> format, useful for data storage, databases, <em>etc.</em></p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>filename</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>atoms.xml</strong></p></td>
+<td><p>The results of calculations performed for atoms in order to initialize the electron density.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>info.xml</strong></p></td>
+<td><p>The information contained in this file is similar to the one written in INFO.OUT, but displayed in the XML format.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>geometry.xml</strong></p></td>
+<td><p>Structural information on the system. This will often be identical to the element structure in your input file, but may differ for certain settings of the attributes in structure, <em>e.g</em>., if primcell = <strong>“true”</strong> or tshift = <strong>“true”</strong></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Some of the output files are not directly readable, because they are written as binary files. They are used by <strong>exciting</strong> for current storage of vectors and matrices. They are relevant when restarting or extending an existing calculation.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>filename</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>EVALFV.OUT</strong></p></td>
+<td><p>First-variational eigenvalues.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>EVALSV.OUT</strong></p></td>
+<td><p>Second-variational eigenvalues.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>EVECFV.OUT</strong></p></td>
+<td><p>First-variational eigenvectors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>EVECSV.OUT</strong></p></td>
+<td><p>Second-variational eigenvectors..</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>OCCSV.OUT</strong></p></td>
+<td><p>Occupation of the second-variational states.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>STATE.OUT</strong></p></td>
+<td><p>Real-space distribution of the density and the potential</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Both <strong>initial</strong> (<em>e.g.</em>, <strong>C.xml</strong>) and <strong>self-consistent</strong> (<em>e.g.</em>, <strong>C_scf.xml</strong>) <strong>speciesfiles</strong> are also saved, at the end of the run, in the working directory. These files specify which basis functions are used for each element in a calculation performed with <strong>exciting</strong>.</p></li>
+</ul>
+<hr style="border:2px solid #DDD"></hr></section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">exciting tutorials</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to Start an exciting Calculation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#0.-Before-Starting">0. Before Starting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#1.-Preparing-Input">1. Preparing Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#2.-Running-Exciting">2. Running Exciting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#3.-Reading-INFO.OUT,-the-Main-Output-File">3. Reading INFO.OUT, the Main Output File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#4.-Output-Files-of-an-exciting-Calculation">4. Output Files of an exciting Calculation</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">Welcome to exciting tutorials’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Mara Voiculescu.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/notebooks/tutorial1.ipynb.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
